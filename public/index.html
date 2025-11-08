@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port.ly - Create Your Portfolio Instantly</title>
+    <meta name="description" content="Upload your resume, get a live portfolio in seconds with AI-powered parsing and beautiful templates.">
+    <meta name="keywords" content="online portfolio builder, AI portfolio, resume to website, Port.ly, portfolio templates">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Port.ly">
+    <link rel="canonical" href="https://portly.pages.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Port.ly - Create Your Portfolio Instantly">
+    <meta property="og:description" content="Upload your resume, get a live portfolio in seconds with AI-powered parsing and beautiful templates.">
+    <meta property="og:url" content="https://portly.pages.dev/">
+    <meta property="og:site_name" content="Port.ly">
+    <meta property="og:image" content="https://portly.pages.dev/favicon.svg">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Port.ly logo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Port.ly - Create Your Portfolio Instantly">
+    <meta name="twitter:description" content="Upload your resume, get a live portfolio in seconds with AI-powered parsing and beautiful templates.">
+    <meta name="twitter:site" content="@reyhanhusain">
+    <meta name="twitter:creator" content="@reyhanhusain">
+    <meta name="twitter:image" content="https://portly.pages.dev/favicon.svg">
+    <meta name="theme-color" content="#ff6b6b">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Boxicons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Port.ly",
+        "url": "https://portly.pages.dev/",
+        "logo": "https://portly.pages.dev/favicon.svg",
+        "sameAs": [
+            "https://twitter.com/reyhanhusain",
+            "https://www.linkedin.com/in/reyhanhussain",
+            "https://github.com/reyhanhussain/port.ly"
+        ],
+        "description": "Port.ly converts your resume into a stunning portfolio website in seconds using AI.",
+        "foundingDate": "2025",
+        "foundingLocation": {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "US"
+            }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Port.ly",
+        "url": "https://portly.pages.dev/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://portly.pages.dev/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <header id="main-header">
+        <nav class="container">
+            <a href="#" class="logo">Port.ly</a>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#templates">Templates</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#uploadSection" class="btn btn-primary">Get Started <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+            <button class="hamburger" id="hamburger-menu" aria-label="Toggle Menu">
+                <i class='bx bx-menu'></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="container">
+            <div class="hero-content animate-on-scroll">
+                <!-- YC Badge -->
+                <div class="yc-badge">
+                    <svg width="20" height="20" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100" height="100" fill="#FF6600"/>
+                        <text x="50" y="70" font-family="Arial, sans-serif" font-size="75" font-weight="bold" fill="white" text-anchor="middle">Y</text>
+                    </svg>
+                    <span>!Backed by Y Combinator</span>
+                </div>
+                
+                <h1>Create Your Portfolio <br><span class="gradient-text">In Seconds</span></h1>
+                <p>Upload your resume and let AI build a stunning portfolio website. Choose from beautiful templates and publish instantly.</p>
+                <div class="hero-buttons">
+                    <a href="#uploadSection" class="btn btn-primary btn-lg" onclick="document.getElementById('uploadSection').scrollIntoView({behavior: 'smooth'}); return false;">Get Started for Free</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>A Simple 4-Step Process</h2>
+                <p>From resume upload to live portfolio in minutes.</p>
+            </div>
+            <div class="workflow-steps">
+                <div class="step-card animate-on-scroll" data-step="1">
+                    <div class="step-icon"><i class='bx bx-upload'></i></div>
+                    <h3>1. Upload Resume</h3>
+                    <p>Upload your PDF resume and our AI will parse it automatically.</p>
+                </div>
+                <div class="step-card animate-on-scroll" data-step="2">
+                    <div class="step-icon"><i class='bx bx-edit'></i></div>
+                    <h3>2. Edit Details</h3>
+                    <p>Review and enhance your information with AI-powered suggestions.</p>
+                </div>
+                <div class="step-card animate-on-scroll" data-step="3">
+                    <div class="step-icon"><i class='bx bx-palette'></i></div>
+                    <h3>3. Choose Template</h3>
+                    <p>Select from beautiful, responsive templates that showcase your style.</p>
+                </div>
+                <div class="step-card animate-on-scroll" data-step="4">
+                    <div class="step-icon"><i class='bx bx-rocket'></i></div>
+                    <h3>4. Publish</h3>
+                    <p>Get your live portfolio URL and share it with the world instantly.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Steps (shown during form) -->
+        <div class="progress-steps">
+            <div class="step active" data-step="1">
+                <span class="step-number">1</span>
+                <span>Upload Resume</span>
+            </div>
+            <div class="step" data-step="2">
+                <span class="step-number">2</span>
+                <span>Edit Details</span>
+            </div>
+            <div class="step" data-step="3">
+                <span class="step-number">3</span>
+                <span>Choose Template</span>
+            </div>
+            <div class="step" data-step="4">
+                <span class="step-number">4</span>
+                <span>Publish</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Step 1: Upload PDF -->
+            <div id="uploadSection" class="section active animate-on-scroll">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📄</div>
+                    <h2>Upload Your Resume</h2>
+<p class="upload-note" style="color: #e63946;">
+  <strong>Scannable PDF resumes only.</strong> Image & DOC support coming soon...
+</p>
+ <p>Drag & drop your PDF resume here, or click to browse</p>
+                    <input type="file" id="pdfFile" accept=".pdf">
+                    <button class="btn-upload" onclick="document.getElementById('pdfFile').click()">
+                        Choose PDF File
+                    </button>
+                </div>
+                <div id="loadingParse" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Parsing your resume with AI... This may take a moment.</p>
+                </div>
+            </div>
+
+            <!-- Step 2: Edit Form -->
+            <div id="formSection" class="section animate-on-scroll">
+                <h2 style="margin-bottom: 30px;">✏️ Edit Your Information</h2>
+                
+                <!-- Basic Info -->
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" id="location" placeholder="City, Country">
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="form-grid">
+                    <div class="form-group missing">
+                        <label>GitHub Username</label>
+                        <input type="text" id="github" placeholder="username or github.com/username">
+                        <p class="optional-note">⚡ Adding this can boost your portfolio (optional)</p>
+                    </div>
+                    <div class="form-group missing">
+                        <label>LinkedIn URL</label>
+                        <input type="url" id="linkedin" placeholder="https://linkedin.com/in/...">
+                        <p class="optional-note">⚡ Adding this can boost your portfolio (optional)</p>
+                    </div>
+                    <div class="form-group missing">
+                        <label>Portfolio Website</label>
+                        <input type="url" id="portfolio" placeholder="https://...">
+                        <p class="optional-note">⚡ Adding this can boost your portfolio (optional)</p>
+                    </div>
+                </div>
+
+                <!-- Bio -->
+                <div class="form-group">
+                    <label>Professional Bio</label>
+                    <textarea id="bio" placeholder="Brief summary about yourself..."></textarea>
+                    <button class="btn-enhance" onclick="enhanceBio()">✨ Enhance with AI</button>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-group">
+                    <label>Skills</label>
+                    <div class="skills-input-container">
+                        <input type="text" id="skillInput" placeholder="Enter a skill...">
+                        <button class="btn-add" onclick="addSkill()" style="width: auto;">Add Skill</button>
+                    </div>
+                    <div id="skillsDisplay" class="skills-display"></div>
+                </div>
+
+                <!-- Projects -->
+                <div class="form-group">
+                    <label>Projects</label>
+                    <div id="projectsList" class="list-items"></div>
+                    <button class="btn-add" onclick="addProject()">+ Add Project</button>
+                </div>
+
+                <!-- Experience -->
+                <div class="form-group">
+                    <label>Work Experience</label>
+                    <div id="experienceList" class="list-items"></div>
+                    <button class="btn-add" onclick="addExperience()">+ Add Experience</button>
+                </div>
+
+                <!-- Education -->
+                <div class="form-group">
+                    <label>Education</label>
+                    <div id="educationList" class="list-items"></div>
+                    <button class="btn-add" onclick="addEducation()">+ Add Education</button>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-secondary" onclick="goToStep(1)">← Back</button>
+                    <button class="btn btn-primary" onclick="goToStep(3)">Next: Choose Template →</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Choose Template -->
+            <div id="templateSection" class="section animate-on-scroll">
+                <h2 style="margin-bottom: 10px;">🎨 Choose Your Template</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 30px;">Select a design that best represents your style</p>
+                
+                <div class="templates-grid">
+                    <div class="template-card" data-template="student" onclick="selectTemplate('student')">
+                        <div class="template-preview student">
+                            <div class="template-mockup">
+                                <div class="mockup-header"></div>
+                                <div class="mockup-content">
+                                    <div class="mockup-line short"></div>
+                                    <div class="mockup-line"></div>
+                                    <div class="mockup-line medium"></div>
+                                </div>
+                                <div class="mockup-badge">Modern</div>
+                            </div>
+                        </div>
+                        <div class="template-info">
+                            <h3><i class='bx bx-rocket'></i> Student</h3>
+                            <p>Colorful gradient design perfect for showcasing projects and skills.</p>
+                            <div class="template-tags">
+                                <span class="tag">Vibrant</span>
+                                <span class="tag">Projects</span>
+                            </div>
+                            <button class="btn-preview" onclick="previewTemplate('student'); event.stopPropagation();">
+                                <i class='bx bx-show'></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="template-card" data-template="professional" onclick="selectTemplate('professional')">
+                        <div class="template-preview professional">
+                            <div class="template-mockup">
+                                <div class="mockup-header gold"></div>
+                                <div class="mockup-content dark">
+                                    <div class="mockup-line short gold"></div>
+                                    <div class="mockup-line gold"></div>
+                                    <div class="mockup-line medium gold"></div>
+                                </div>
+                                <div class="mockup-badge gold">Elite</div>
+                            </div>
+                        </div>
+                        <div class="template-info">
+                            <h3><i class='bx bx-briefcase'></i> Professional</h3>
+                            <p>Minimal dark theme with gold accents for corporate portfolios.</p>
+                            <div class="template-tags">
+                                <span class="tag">Elegant</span>
+                                <span class="tag">Corporate</span>
+                            </div>
+                            <button class="btn-preview" onclick="previewTemplate('professional'); event.stopPropagation();">
+                                <i class='bx bx-show'></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="template-card" data-template="creative" onclick="selectTemplate('creative')">
+                        <div class="template-preview creative">
+                            <div class="template-mockup">
+                                <div class="mockup-header rainbow"></div>
+                                <div class="mockup-content light">
+                                    <div class="mockup-line short rainbow"></div>
+                                    <div class="mockup-line rainbow"></div>
+                                    <div class="mockup-line medium rainbow"></div>
+                                </div>
+                                <div class="mockup-badge rainbow">Bold</div>
+                            </div>
+                        </div>
+                        <div class="template-info">
+                            <h3><i class='bx bx-palette'></i> Creative</h3>
+                            <p>Bold rainbow gradients ideal for designers and artists.</p>
+                            <div class="template-tags">
+                                <span class="tag">Artistic</span>
+                                <span class="tag">Unique</span>
+                            </div>
+                            <button class="btn-preview" onclick="previewTemplate('creative'); event.stopPropagation();">
+                                <i class='bx bx-show'></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-secondary" onclick="goToStep(2)">← Back</button>
+                    <button class="btn btn-primary" id="btnNextToPublish" onclick="goToStep(4)" disabled>
+                        Next: Publish →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 4: Publish -->
+            <div id="publishSection" class="section animate-on-scroll">
+                <div class="publish-header">
+                    <div class="publish-icon">
+                        <i class='bx bx-rocket'></i>
+                    </div>
+                    <h2>Publish Your Portfolio</h2>
+                    <p>You're one step away from having your portfolio live on the web!</p>
+                </div>
+                
+                <div class="publish-form">
+                    <div class="publish-card">
+                        <div class="publish-card-header">
+                            <i class='bx bx-user-circle'></i>
+                            <h3>Choose Your Username</h3>
+                        </div>
+                        <p class="publish-card-description">
+                            Pick a unique username for your portfolio URL. Use only letters, numbers, and hyphens.
+                        </p>
+                        
+                        <div class="username-input-wrapper">
+                            <div class="username-input">
+                                <span class="username-prefix">
+                                    <i class='bx bx-at'></i>
+                                </span>
+                                <input type="text" id="username" placeholder="your-username" 
+                                       pattern="[a-zA-Z0-9\-]+" 
+                                       title="Only letters, numbers, and hyphens allowed">
+                                <button class="btn-check" onclick="checkUsername()">
+                                    <i class='bx bx-search-alt'></i> Check
+                                </button>
+                            </div>
+                            <div id="availabilityMessage" class="availability hidden"></div>
+                        </div>
+                    </div>
+
+                    <div class="publish-card url-preview-card">
+                        <div class="publish-card-header">
+                            <i class='bx bx-link-alt'></i>
+                            <h3>Your Portfolio URL</h3>
+                        </div>
+                        <div class="url-preview-box">
+                            <div class="url-icon">
+                                <i class='bx bx-globe'></i>
+                            </div>
+                            <div class="url-text">
+                                <span class="url-label">Your portfolio will be live at:</span>
+                                <strong id="previewURL" class="url-value">Choose a username first</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publish-actions">
+                        <button class="btn btn-secondary" onclick="goToStep(3)">
+                            <i class='bx bx-left-arrow-alt'></i> Back
+                        </button>
+                        <button class="btn btn-primary btn-publish" id="btnPublish" onclick="publishPortfolio()" disabled>
+                            <i class='bx bx-rocket'></i> Publish Portfolio
+                        </button>
+                    </div>
+
+                    <div id="publishLoading" class="loading hidden">
+                        <div class="spinner"></div>
+                        <p>Publishing your portfolio...</p>
+                    </div>
+
+                    <div id="successMessage" class="success-message hidden">
+                        <div class="success-icon">
+                            <i class='bx bx-check-circle'></i>
+                        </div>
+                        <h2>🎉 Your Portfolio is Live!</h2>
+                        <p>Your portfolio has been successfully published and is now available online.</p>
+                        <p class="success-note">
+                            <i class='bx bx-info-circle'></i>
+                            Click the link below to open your portfolio in a new tab
+                        </p>
+                        <p class="deployment-delay" style="color: #e63946;">
+                       <i class='bx bx-time-five'></i>
+                         Deployments can take up to <strong>2 minutes</strong> to appear worldwide. 
+                       If the link shows "Site Not Found", wait a moment and refresh.
+</p>
+
+                        <div class="live-link">
+                            <a href="" id="liveLink" target="_blank" rel="noopener noreferrer"></a>
+                        </div>
+                        <button class="btn btn-primary" onclick="window.open(document.getElementById('liveLink').href, '_blank')">
+                            🚀 View
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section id="features" class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Powerful Features for Your Portfolio</h2>
+                <p>Everything you need to create an impressive online presence.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="card-icon"><i class='bx bxs-brain'></i></div>
+                    <h3>AI-Powered Parsing</h3>
+                    <p>Our AI automatically extracts information from your resume, saving you time.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="card-icon"><i class='bx bxs-magic-wand'></i></div>
+                    <h3>Content Enhancement</h3>
+                    <p>Use AI to enhance your bio, project descriptions, and work experience.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="card-icon"><i class='bx bxs-layout'></i></div>
+                    <h3>Beautiful Templates</h3>
+                    <p>Choose from professionally designed templates that make you stand out.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="card-icon"><i class='bx bxs-devices'></i></div>
+                    <h3>Mobile Responsive</h3>
+                    <p>Your portfolio looks perfect on all devices - desktop, tablet, and mobile.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="card-icon"><i class='bx bxs-bolt-circle'></i></div>
+                    <h3>Instant Publishing</h3>
+                    <p>Go live in seconds with our instant deployment to Netlify.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="card-icon"><i class='bx bxs-lock-alt'></i></div>
+                    <h3>Secure & Reliable</h3>
+                    <p>Your data is encrypted and stored securely with industry-leading practices.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <a href="#" class="logo">Port.ly</a>
+                    <p>Create stunning portfolios from your resume in seconds.</p>
+                    <div class="social-links">
+
+                        <a href="https://twitter.com/reyhanhusain" target="_blank" rel="noopener" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                        <a href="https://www.linkedin.com/in/reyhanhussain" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#uploadSection">Get Started</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#" onclick="openModal('about'); return false;">About Us</a></li>
+                        <li><a href="#" onclick="openModal('privacy'); return false;">Privacy Policy</a></li>
+                        <li><a href="#" onclick="openModal('terms'); return false;">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Port.ly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Template Preview Modal -->
+    <div id="previewModal" class="modal preview-modal">
+        <div class="modal-content preview-modal-content">
+            <div class="modal-header">
+                <h2 id="previewModalTitle">Template Preview</h2>
+                <button class="modal-close" onclick="closePreviewModal()" aria-label="Close preview">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+            <div class="preview-modal-body">
+                <iframe id="previewFrame" title="Template Preview"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be inserted here -->
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>
